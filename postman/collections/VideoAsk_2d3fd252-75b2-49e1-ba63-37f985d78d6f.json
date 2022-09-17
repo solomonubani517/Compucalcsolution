@@ -148,13 +148,9 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "https://f6e86145-395b-46b8-ad72-b652dc670eda.mock.pstmn.io",
-							"protocol": "https",
+							"raw": "{{$randomMonth}}",
 							"host": [
-								"f6e86145-395b-46b8-ad72-b652dc670eda",
-								"mock",
-								"pstmn",
-								"io"
+								"{{$randomMonth}}"
 							]
 						}
 					},
@@ -250,7 +246,7 @@
 	],
 	"variable": [
 		{
-			"id": "105b4c18-20dc-4a61-8bbe-9eacb0564bd4",
+			"id": "bd748cd1-25f7-4555-866e-d5c0bf7e0a20",
 			"key": "baseUrl",
 			"value": "/",
 			"type": "string"
