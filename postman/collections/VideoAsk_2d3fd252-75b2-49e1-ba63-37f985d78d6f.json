@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "bee4aa36-d2e0-4fb3-8459-ec6510c1b828",
+		"name": "VideoAsk",
+		"description": "Buy or rent spacecrafts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Read a spacecraft",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8440e513-6e77-458b-b4ff-a120325eded7",
+						"exec": [
+							"pm.environment.get(\"variable_key\");\r",
+							"pm.globals.get(\"variable_key\");\r",
+							"pm.variables.get(\"variable_key\");\r",
+							"pm.collectionVariables.get(\"variable_key\");\r",
+							"pm.environment.set(\"variable_key\", \"variable_value\");\r",
+							"pm.globals.set(\"variable_key\", \"variable_value\");\r",
+							"pm.collectionVariables.set(\"variable_key\", \"variable_value\");\r",
+							"pm.environment.unset(\"variable_key\");\r",
+							"pm.globals.unset(\"variable_key\");\r",
+							"pm.collectionVariables.unset(\"variable_key\");\r",
+							"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+							"    console.log(response.json());\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "dcdf6853-3143-490a-acde-630b08b47e59",
+						"exec": [
+							"pm.environment.get(\"variable_key\");\r",
+							"pm.globals.get(\"variable_key\");\r",
+							"pm.variables.get(\"variable_key\");\r",
+							"pm.collectionVariables.get(\"variable_key\");\r",
+							"pm.environment.set(\"variable_key\", \"variable_value\");\r",
+							"pm.globals.set(\"variable_key\", \"variable_value\");\r",
+							"pm.collectionVariables.set(\"variable_key\", \"variable_value\");\r",
+							"pm.environment.unset(\"variable_key\");\r",
+							"pm.globals.unset(\"variable_key\");\r",
+							"pm.collectionVariables.unset(\"variable_key\");\r",
+							"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+							"    console.log(response.json());\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"string_you_want_to_search\");\r",
+							"});\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.value).to.eql(100);\r",
+							"});\r",
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"response_body_string\");\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"Created\");\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"Created\");\r",
+							"});\r",
+							"var jsonObject = xml2Json(responseBody);\r",
+							"var schema = {\r",
+							"    \"items\": {\r",
+							"        \"type\": \"boolean\"\r",
+							"    }\r",
+							"};\r",
+							"\r",
+							"var data1 = [true, false];\r",
+							"var data2 = [true, 123];\r",
+							"\r",
+							"pm.test('Schema is valid', function () {\r",
+							"    pm.expect(tv4.validate(data1, schema)).to.be.true;\r",
+							"    pm.expect(tv4.validate(data2, schema)).to.be.true;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "a0785e88-f8ac-425d-b74d-688798f4a2fe",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"followOriginalHttpMethod": true,
+				"followAuthorizationHeader": true,
+				"removeRefererHeaderOnRedirect": true,
+				"disableCookies": true,
+				"tlsPreferServerCiphers": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://f6e86145-395b-46b8-ad72-b652dc670eda.mock.pstmn.io",
+					"protocol": "https",
+					"host": [
+						"f6e86145-395b-46b8-ad72-b652dc670eda",
+						"mock",
+						"pstmn",
+						"io"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "f7389968-2b86-4ee6-80c6-3a1644b22800",
+					"name": "Read a spacecraft",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://f6e86145-395b-46b8-ad72-b652dc670eda.mock.pstmn.io",
+							"protocol": "https",
+							"host": [
+								"f6e86145-395b-46b8-ad72-b652dc670eda",
+								"mock",
+								"pstmn",
+								"io"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": null
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "780f6ff4-2574-4abc-9906-799f6d155b2b",
+				"type": "text/javascript",
+				"exec": [
+					"pm.environment.get(\"variable_key\");",
+					"pm.globals.get(\"variable_key\");",
+					"pm.variables.get(\"variable_key\");",
+					"pm.collectionVariables.get(\"variable_key\");",
+					"pm.environment.set(\"variable_key\", \"variable_value\");",
+					"pm.globals.set(\"variable_key\", \"variable_value\");",
+					"pm.collectionVariables.set(\"variable_key\", \"variable_value\");",
+					"pm.environment.unset(\"variable_key\");",
+					"pm.globals.unset(\"variable_key\");",
+					"pm.collectionVariables.unset(\"variable_key\");",
+					"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {",
+					"    console.log(response.json());",
+					"});"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5030fea8-7edc-4d5e-b2ac-b52d33ad0f5c",
+				"type": "text/javascript",
+				"exec": [
+					"pm.environment.get(\"variable_key\");",
+					"pm.globals.get(\"variable_key\");",
+					"pm.variables.get(\"variable_key\");",
+					"pm.collectionVariables.get(\"variable_key\");",
+					"pm.environment.set(\"variable_key\", \"variable_value\");",
+					"pm.globals.set(\"variable_key\", \"variable_value\");",
+					"pm.collectionVariables.set(\"variable_key\", \"variable_value\");",
+					"pm.environment.unset(\"variable_key\");",
+					"pm.collectionVariables.unset(\"variable_key\");",
+					"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {",
+					"    console.log(response.json());",
+					"});",
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});",
+					"pm.test(\"Body matches string\", function () {",
+					"    pm.expect(pm.response.text()).to.include(\"string_you_want_to_search\");",
+					"});",
+					"pm.test(\"Your test name\", function () {",
+					"    var jsonData = pm.response.json();",
+					"    pm.expect(jsonData.value).to.eql(100);",
+					"});",
+					"pm.test(\"Body is correct\", function () {",
+					"    pm.response.to.have.body(\"response_body_string\");",
+					"});",
+					"pm.test(\"Content-Type is present\", function () {",
+					"    pm.response.to.have.header(\"Content-Type\");",
+					"});",
+					"pm.test(\"Response time is less than 200ms\", function () {",
+					"    pm.expect(pm.response.responseTime).to.be.below(200);",
+					"});",
+					"pm.test(\"Successful POST request\", function () {",
+					"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);",
+					"});",
+					"var jsonObject = xml2Json(responseBody);",
+					"var schema = {",
+					"    \"items\": {",
+					"        \"type\": \"boolean\"",
+					"    }",
+					"};",
+					"",
+					"var data1 = [true, false];",
+					"var data2 = [true, 123];",
+					"",
+					"pm.test('Schema is valid', function () {",
+					"    pm.expect(tv4.validate(data1, schema)).to.be.true;",
+					"    pm.expect(tv4.validate(data2, schema)).to.be.true;",
+					"});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "105b4c18-20dc-4a61-8bbe-9eacb0564bd4",
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}
